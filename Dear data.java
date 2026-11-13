@@ -70,6 +70,22 @@ void setup()
   earR2Y1=20 ;
   earR2X2=44 ;
   earR2Y2 =35;
+
+  eyeLD= 17 ;
+  eyeLX = 25;
+  eyeLY = 55;
+  
+  eyeRD  = 17;
+  eyeRX  = 55;
+  eyeRY= 55 ;
+  
+irisLD = 5 ;
+ irisLX = 25;
+ irisLY = 55;
+ 
+ irisRD =5 ;
+ irisRX =55;
+ irisRY =55;
 }
 
 void draw()
@@ -79,4 +95,8 @@ void draw()
   line(earL2X1, earL2Y1, earL2X2, earL2Y2 );
   line(earR1X1, earR1Y1, earR1X2, earR1Y2 );
   line(earR2X1, earR2Y1, earR2X2, earR2Y2 );
+  circle(eyeLX, eyeLY, eyeLD);
+  circle(eyeRX, eyeRY, eyeRD);
+  circle(irisLX, irisLY, irisLD);
+  circle(irisRX, irisRY, irisRD);
 }
