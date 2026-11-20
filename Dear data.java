@@ -22,10 +22,12 @@ float earR2X1 ;
 float earR2Y1 ;
 float earR2X2 ;
 float earR2Y2 ;
-float eyeLD ;
+float eyeLW ;
+float eyeLH ;
 float eyeLX ;
 float eyeLY ;
-float eyeRD  ;
+float eyeRW  ;
+float eyeRH ;
 float eyeRX  ;
 float eyeRY ;
 float irisLD ;
@@ -71,11 +73,13 @@ void setup()
   earR2X2=44 ;
   earR2Y2 =35;
 
-  eyeLD= 17 ;
+  eyeLW= 17 ;
+  eyeLH = 13 ;
   eyeLX = 25;
   eyeLY = 55;
   
-  eyeRD  = 17;
+  eyeRW  = 17;
+  eyeRH = 13 ;
   eyeRX  = 55;
   eyeRY= 55 ;
   
@@ -86,6 +90,14 @@ irisLD = 5 ;
  irisRD =5 ;
  irisRX =55;
  irisRY =55;
+ 
+ noseX1 = 35;
+noseY1 = 65;
+noseX2 = 45;
+ noseY2 = 65;
+ noseX3 = 40;
+ noseY3 = 70; 
+
 }
 
 void draw()
@@ -95,8 +107,10 @@ void draw()
   line(earL2X1, earL2Y1, earL2X2, earL2Y2 );
   line(earR1X1, earR1Y1, earR1X2, earR1Y2 );
   line(earR2X1, earR2Y1, earR2X2, earR2Y2 );
-  circle(eyeLX, eyeLY, eyeLD);
-  circle(eyeRX, eyeRY, eyeRD);
+  ellipse(eyeLX, eyeLY, eyeLW, eyeLH);
+  ellipse(eyeRX, eyeRY, eyeRW, eyeRH);
   circle(irisLX, irisLY, irisLD);
   circle(irisRX, irisRY, irisRD);
+  triangle(noseX1, noseY1, noseX2, noseY2, noseX3, noseY3);
+
 }
